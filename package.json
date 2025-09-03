@@ -1,0 +1,26 @@
+{
+  "name": "1dv610-l1",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "homepage": "https://github.com/Jonwet/1dv610-L1#readme",
+  "bugs": {
+    "url": "https://github.com/Jonwet/1dv610-L1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonwet/1dv610-L1.git"
+  },
+  "license": "MIT",
+  "author": "Jonatan Wetterberg",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@lnu/eslint-config": "^1.1.10"
+  }
+}
