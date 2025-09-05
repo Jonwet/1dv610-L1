@@ -14,6 +14,25 @@ const asciiArt = `
 (((^_(((/(((_/  
 `
 
-console.log(`Hello, ${name}! \n${asciiArt}`)
+const vowels = ['a', 'e', 'i', 'o', 'u', 'å', 'ä', 'ö', 'A', 'E', 'I', 'O', 'U', 'Å', 'Ä', 'Ö']
+
+/**
+ *
+ * @param name
+ */
+const rovarsprak = (name) => {
+  let translated = ''
+  for (let i = 0; i < name.length; i++) {
+    if (!vowels.includes(name[i]) && name[i].toLowerCase() !== name[i].toUpperCase()) {
+      const letter = name[i]
+      translated += letter + 'o' + letter
+      continue
+    }
+    translated += name[i]
+  }
+  return translated
+}
+
+console.log(`Hello, ${name}! \n${rovarsprak(name)}\n${asciiArt}`)
 
 readline.close()
