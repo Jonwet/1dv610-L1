@@ -6,7 +6,7 @@ import { createInterface } from 'node:readline/promises'
 
 const readline = createInterface({ input: process.stdin, output: process.stdout })
 
-const name = await readline.question('Welcome! \nWhat is your name? ')
+const name = await readline.question('Välkommen! \nVad heter du? ')
 const asciiArt = `
  |\\__/,|   (´\\
  |_ _  |.--.) )
@@ -17,8 +17,10 @@ const asciiArt = `
 const vowels = ['a', 'e', 'i', 'o', 'u', 'å', 'ä', 'ö', 'A', 'E', 'I', 'O', 'U', 'Å', 'Ä', 'Ö']
 
 /**
+ * Translates a given name to rövarspråket (the robber language).
  *
- * @param name
+ * @param {string} name - The name to translate to rövarspråket.
+ * @returns {string} The translated name.
  */
 const rovarsprak = (name) => {
   let translated = ''
@@ -33,6 +35,6 @@ const rovarsprak = (name) => {
   return translated
 }
 
-console.log(`Hello, ${name}! \n${rovarsprak(name)}\n${asciiArt}`)
+console.log(`Tjena, ${name}! \nDitt namn på rövarspråket är: ${rovarsprak(name)}\n${asciiArt}`)
 
 readline.close()
