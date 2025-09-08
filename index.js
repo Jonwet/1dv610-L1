@@ -25,7 +25,7 @@ const vowels = ['a', 'e', 'i', 'o', 'u', 'å', 'ä', 'ö', 'A', 'E', 'I', 'O', '
 const rovarsprak = (name) => {
   let translated = ''
   for (let i = 0; i < name.length; i++) {
-    if (!vowels.includes(name[i]) && name[i].toLowerCase() !== name[i].toUpperCase()) {
+    if (!vowels.includes(name[i]) && isNaN(name[i])) {
       const letter = name[i]
       translated += letter + 'o' + letter
       continue
